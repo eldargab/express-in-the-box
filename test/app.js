@@ -12,7 +12,7 @@ describe('App', function () {
     it('Should dispatch routes to boxes', function (done) {
         app
         .get('/', 'hello')
-        .on('hello', function (get) {
+        .def('hello', function (get) {
             get('response').send('hello')
         })
         request(app).get('/')
@@ -23,7 +23,7 @@ describe('App', function () {
     it('Should respond with error on exception', function (done) {
         app
         .get('/error', 'error')
-        .on('error', function () {
+        .def('error', function () {
             throw new Error('runtime error')
         })
         request(app).get('/error')
@@ -44,7 +44,7 @@ describe('App', function () {
 
     describe('Request', function () {
         it('Should have .query default to {}', function (done) {
-            app.get('/', 'root').on('root', function (get) {
+            app.get('/', 'root').def('root', function (get) {
                 get('request').should.have.property('query').eql({})
                 get('response').end()
             })
@@ -52,7 +52,7 @@ describe('App', function () {
         })
 
         it('Should contain the parsed query string', function (done) {
-            app.get('/', 'root').on('root', function (get) {
+            app.get('/', 'root').def('root', function (get) {
                 get('request').should.have.property('query').eql({
                     id: '1234'
                 })

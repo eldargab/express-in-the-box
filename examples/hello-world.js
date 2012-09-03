@@ -3,7 +3,7 @@ var app = App()
 
 app.get('/', 'send-hello')
 
-app.on('send-hello', function (get) {
+app.def('send-hello', function (get) {
     get('response').send('Hello world!')
 })
 
