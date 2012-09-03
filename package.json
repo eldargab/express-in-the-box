@@ -1,0 +1,28 @@
+{
+  "name": "express-in-the-box",
+  "version": "0.0.0",
+  "description": "Build systems style computational model for web servers with express batteries included",
+  "scripts": {
+    "test": "NODE_ENV=test mocha -R spec"
+  },
+  "repository": "",
+  "keywords": [
+    "express",
+    "web",
+    "framework",
+    "the-box"
+  ],
+  "dependencies": {
+    "express": "3.x",
+    "qs": "*",
+    "methods": "*",
+    "the-box": "0.0.x"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "supertest": "*"
+  },
+  "author": "Eldar Gabdullin <eldargab@gmail.com>",
+  "license": "MIT"
+}
