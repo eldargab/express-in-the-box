@@ -31,11 +31,10 @@ describe('App', function () {
       .expect(/my runtime error/, done)
   })
 
-  it('Should respond with error on undefined box', function (done) {
+  it('Should respond with 404 on undefined box', function (done) {
     app.get('/', 'undefined')
     request(app).get('/')
-      .expect(500)
-      .expect(/box/, done)
+      .expect(404, done)
   })
 
   it('Should respond with 404 if there is no matched route', function (done) {
