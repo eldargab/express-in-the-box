@@ -60,4 +60,38 @@ describe('App', function () {
       request(app).get('/?id=1234').expect(200, done)
     })
   })
+
+  describe('Response', function () {
+    describe('.redirect()', function () {
+      it('relative to url', function (done) {
+        app
+          .get('/blog', 'blog')
+          .def('blog', function (get) {
+            get('response').redirect('./posts')
+          })
+        request(app)
+          .get('/blog')
+          .set('Host', 'example.com')
+          .end(function (err, res) {
+            res.headers.should.have.property('location', '//example.com/blog/./posts')
+            done()
+          })
+      })
+
+      it('relative to root', function (done) {
+        app
+          .get('/blog', 'blog')
+          .def('blog', function (get) {
+            get('response').redirect('posts')
+          })
+        request(app)
+          .get('/blog')
+          .set('Host', 'example.com')
+          .end(function (err, res) {
+            res.headers.should.have.property('location', '//example.com/posts')
+            done()
+          })
+      })
+    })
+  })
 })
