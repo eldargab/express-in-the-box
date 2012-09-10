@@ -1,6 +1,6 @@
 {
   "name": "express-in-the-box",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The-box container with express batteries included",
   "scripts": {
     "test": "NODE_ENV=test mocha -R spec"
@@ -16,7 +16,7 @@
     "express": "3.x",
     "qs": "*",
     "methods": "*",
-    "the-box": "0.0.x"
+    "the-box": "0.0.1"
   },
   "devDependencies": {
     "mocha": "*",
