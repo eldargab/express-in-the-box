@@ -1,9 +1,10 @@
 # express-in-the-box
 
-This project integrates [express](http://expressjs.com/) [Request](http://expres
-sjs.com/api.html#req.params)-[Response](http://expressjs.com/api.html#res.status
-) prototypes and [Router](http://expressjs.com/api.html#app.VERB) with [the-
-box](https://github.com/eldargab/the-box) container.
+This project integrates [express](http://expressjs.com/)
+[Request](http://expressjs.com/api.html#req.params)-
+[Response](http://expressjs.com/api.html#res.status)
+prototypes and [Router](http://expressjs.com/api.html#app.VERB) with
+[the-box](https://github.com/eldargab/the-box) container.
 
 ## Usage
 
@@ -36,8 +37,8 @@ app.after('request', function (get, req, done) {
 })
 ```
 
-For further details see [the-box documentation](https://github.com/eldargab/the-
-box#readme).
+For further details see
+[the-box documentation](https://github.com/eldargab/the-box#readme).
 
 ## Installation
 
