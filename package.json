@@ -1,7 +1,7 @@
 {
   "name": "express-in-the-box",
   "version": "0.0.0",
-  "description": "Build systems style computational model for web servers with express batteries included",
+  "description": "The-box container with express batteries included",
   "scripts": {
     "test": "NODE_ENV=test mocha -R spec"
   },
